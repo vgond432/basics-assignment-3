@@ -25,16 +25,4 @@ export class DisplayDetailsComponent implements OnInit {
     this.logs.push('Click '+ this.clickCounter + ' at ' + current.toLocaleTimeString());
   }
 
-  getBackground(log: string){
-    return this.getClickNumber(log) >= 5 ? 'blue': 'white';
-  }
-
-  getTextColor(log:string){
-    return this.getClickNumber(log) >= 5 ? true : false;
-  }
-
-  getClickNumber(log:string){
-    return Number.parseInt(log.split(' ')[1]);
-  }
-
 }
